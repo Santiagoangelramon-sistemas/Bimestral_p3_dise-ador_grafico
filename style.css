@@ -1,0 +1,479 @@
+/* ==========================================================================
+   1. RESET UNIVERSAL Y ESTILOS BASE (Se aplica a todas las páginas)
+   ========================================================================== */
+* {
+    box-sizing: border-box; /* El padding y bordes se incluyen en el ancho total [11-13] */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Tipografía moderna [14, 15] */
+    color: #2c3e50; /* Texto oscuro para asegurar un buen contraste [16] */
+    line-height: 1.6; /* Interlineado recomendado para lectura cómoda [17, 18] */
+    padding: 2rem 1rem;
+}
+
+/* ==========================================================================
+   2. CONTENEDOR PRINCIPAL COMPARTO (Asegura consistencia visual en todo el sitio)
+   ========================================================================== */
+.contenedor {
+    max-width: 1000px; /* Evita que el contenido se estire de más en PC [12, 19] */
+    margin: 2rem auto; /* Centra el bloque entero horizontalmente [12, 19] */
+    background-color: rgba(255, 255, 255, 0.97); /* Caja blanca para contraste accesible [20, 21] */
+    padding: 2.5rem;
+    border-radius: 12px; /* Esquinas redondeadas elegantes [12, 22] */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave para dar profundidad [18] */
+}
+
+/* Títulos principales unificados */
+.titulo-principal {
+    text-align: center; /* Centra los títulos h1 [14] */
+    font-size: 2.5rem; /* Tamaño proporcional responsivo [17, 23] */
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Párrafos descriptivos base */
+.parrafo-introductorio {
+    font-size: 1.15rem;
+    text-align: justify; /* Alineación limpia recomendada [17, 19] */
+    color: #34495e;
+    margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   3. TEMAS Y COLORES DE FONDO ESPECÍFICOS (Gracias a las clases de body [5, 6])
+   ========================================================================== */
+/* Fondos únicos de cada página */
+.body-inicio, 
+.body-proyecto { background-color: rgb(239, 213, 250); } /* Lavanda original [24] */
+
+.body-nacimiento, 
+.body-educacion { background-color: rgb(182, 238, 233); } /* Turquesa claro original */
+
+.body-familia { background-color: rgb(248, 227, 156); } /* Amarillo cálido original */
+.body-amigos { background-color: rgb(255, 206, 227); } /* Rosa original */
+.body-hobbies { background-color: rgb(255, 95, 95); } /* Rojo original */
+.body-musica { background-color: rgb(199, 255, 181); } /* Verde original */
+.body-horario { background-color: #eef2f7; } /* Gris azulado suave */
+
+/* Colores de títulos personalizados según la sección para armonía visual */
+.body-inicio .titulo-principal,
+.body-proyecto .titulo-principal { color: #8e44ad; }
+
+.body-nacimiento .titulo-principal, 
+.body-educacion .titulo-principal { color: #0d5c5c; }
+
+.body-familia .titulo-principal { color: #8d6e63; }
+.body-amigos .titulo-principal { color: #b33939; }
+.body-hobbies .titulo-principal { color: #c0392b; }
+.body-musica .titulo-principal { color: #27ae60; }
+
+/* ==========================================================================
+   4. ESTILOS PARA LA PÁGINA DE INICIO (index.html)
+   ========================================================================== */
+/* Header Hero */
+.hero {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe); /* Degradado moderno [22] */
+    color: #ffffff;
+    padding: 4rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto [17, 18] */
+}
+
+.subtitulo-principal {
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Banner Principal */
+.contenedor-banner {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.banner-principal {
+    width: 100%;
+    height: auto; /* Mantiene proporción de imagen responsiva [9, 12] */
+    display: block;
+}
+
+.indicacion-navegacion {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 1.5rem;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Cuadrícula de Navegación (CSS Grid) [8, 25, 26] */
+.secciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); /* Columnas responsivas automáticas [27] */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.tarjeta-navegacion {
+    text-decoration: none; /* Quita el subrayado azul por defecto [17, 28] */
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición animada suave [29, 30] */
+}
+
+.tarjeta-navegacion:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta al pasar el ratón [25, 31] */
+    box-shadow: 0 10px 20px rgba(108, 92, 231, 0.2);
+}
+
+.tarjeta-navegacion img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Ajusta la imagen dentro del espacio sin deformarla [32] */
+    display: block;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.tarjeta-info {
+    padding: 1rem;
+    text-align: center;
+    background-color: #faf9ff;
+}
+
+.tarjeta-info h3 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   5. GALERÍAS DE IMÁGENES Y TARJETAS (Amigos, Familia, Educación, Proyecto de Vida)
+   ========================================================================== */
+/* Contenedores de galerías generales usando Grid */
+.galeria,
+.galeria-colegio,
+.galeria-familia,
+.galeria-metas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Rejilla bidimensional responsiva [8, 27] */
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Tarjetas de fotos unificadas */
+.tarjeta-amigo,
+.tarjeta-imagen,
+.tarjeta-familiar,
+.tarjeta-meta {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-amigo:hover,
+.tarjeta-imagen:hover,
+.tarjeta-familiar:hover,
+.tarjeta-meta:hover {
+    transform: translateY(-5px); /* Efecto interactivo [25, 31] */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Imágenes fluidas */
+.foto-amigo,
+.foto-colegio,
+.foto-familiar,
+.foto-hobby,
+.foto-meta,
+.foto-nacimiento {
+    width: 100%;
+    height: 250px; /* Tamaño unificado para que todas las tarjetas se alineen perfectamente */
+    object-fit: cover; /* Recorta la imagen para que llene el espacio sin distorsión [32] */
+    display: block;
+}
+
+.info-amigo,
+.info-foto,
+.pie-meta,
+.pie-imagen {
+    padding: 1rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.info-amigo h3, .info-foto h3 {
+    font-size: 1.15rem;
+    color: #2c3e50;
+    margin-bottom: 0.3rem;
+}
+
+/* ==========================================================================
+   6. ESTILOS PARA LA SECCIÓN DE HOBBIES (hobbies.html)
+   ========================================================================== */
+.hobbies-contenido {
+    display: flex;
+    flex-direction: column; /* Apila en vertical por defecto en móviles [33, 34] */
+    gap: 2rem;
+}
+
+/* Listas desordenadas con estilo personalizado */
+.lista-hobbies, 
+.lista-generos, 
+.lista-metas {
+    list-style-type: none; /* Elimina viñetas por defecto [35, 36] */
+}
+
+.lista-hobbies li,
+.lista-generos li,
+.lista-metas li {
+    background-color: #fcf8ff;
+    border-left: 5px solid #9b59b6; /* Borde izquierdo de color para destacar [22] */
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 0.8rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.lista-hobbies li:hover,
+.lista-generos li:hover,
+.lista-metas li:hover {
+    transform: translateX(8px); /* Desplaza sutilmente a la derecha al pasar el mouse [31] */
+}
+
+/* Borde rojo de Hobbies */
+.body-hobbies .lista-hobbies li {
+    border-left-color: #ff5f5f;
+    background-color: #fdf2f2;
+}
+
+/* Borde verde de Música */
+.body-musica .lista-generos li {
+    border-left-color: #2dcc71;
+    background-color: #f4fbf4;
+}
+
+.icono {
+    margin-right: 10px;
+}
+
+/* ==========================================================================
+   7. ESTILOS PARA LA SECCIÓN DE MÚSICA (musica.html)
+   ========================================================================== */
+.musica-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Tarjeta de disgusto */
+.tarjeta-disgusto {
+    background-color: #fff5f5;
+    border: 1px solid #fed7d7;
+    border-left: 5px solid #e53e3e;
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icono-disgusto {
+    font-size: 2.5rem;
+}
+
+.tarjeta-disgusto p {
+    font-size: 1.05rem;
+    color: #c53030;
+    font-weight: 500;
+}
+
+/* Videos de YouTube Responsivos (Diseño fluido 16:9) */
+.seccion-videos {
+    border-top: 2px dashed #eee;
+    padding-top: 2.5rem;
+}
+
+.galeria-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.contenedor-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 [37] */
+    height: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; /* Quita el borde de iframe por defecto */
+}
+
+/* ==========================================================================
+   8. ESTILOS PARA LA TABLA DE HORARIO (horario.html)
+   ========================================================================== */
+.tabla-responsiva {
+    width: 100%;
+    overflow-x: auto; /* Permite scroll horizontal en móviles para que no se rompa [37, 38] */
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Colapsa los bordes de la tabla [10, 39, 40] */
+    background-color: #ffffff;
+    min-width: 750px; /* Asegura un ancho mínimo en pantallas pequeñas */
+}
+
+th, td {
+    border: 1px solid #e0e0e0;
+    padding: 10px 8px; /* Espacio cómodo dentro de las celdas [10, 38, 39] */
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+th {
+    background-color: #34495e; /* Cabecera oscura elegante */
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.columna-hora {
+    background-color: #f8f9fa;
+    color: #34495e;
+    font-weight: bold;
+}
+
+.header-jornada {
+    background-color: #eaedd1;
+    color: #2c3e50;
+    font-weight: bold;
+    padding: 12px;
+}
+
+.descanso {
+    background-color: #fff9c4; /* Tu color amarillo para el descanso */
+    color: #d35400;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Resaltado de clases */
+.celda-practica { background-color: #e3f2fd; color: #1976d2; font-weight: 500; }
+.celda-edufisica { background-color: #e8f5e9; color: #2e7d32; font-weight: 500; }
+
+/* Actividades Extraescolares */
+.actividades-extra {
+    border-top: 2px dashed #eee;
+    padding-top: 2.5rem;
+}
+
+.subtitulo-extra {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.tarjetas-actividades {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tarjeta-actividad {
+    background-color: #fdfefe;
+    border: 1px solid #eef2f3;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-actividad:hover {
+    transform: translateY(-4px);
+}
+
+.icono-actividad {
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-bottom: 0.8rem;
+}
+
+/* ==========================================================================
+   9. ESTILOS PARA PROYECTO DE VIDA (proyecto_vida.html)
+   ========================================================================== */
+.bloque-metas {
+    margin-bottom: 3.5rem;
+}
+
+.metas-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ==========================================================================
+   10. MEDIA QUERIES (Ajustes para tabletas y computadoras) [33, 41-43]
+   ========================================================================== */
+@media (min-width: 768px) {
+    /* Hobbies y Música: Coloca la lista y los bloques secundarios lado a lado */
+    .hobbies-contenido,
+    .musica-contenido {
+        flex-direction: row; /* Diseño horizontal [7, 34] */
+        align-items: flex-start;
+    }
+    
+    .seccion-lista, .seccion-generos { flex: 1.2; }
+    .seccion-visual, .seccion-disgustos { flex: 0.8; }
+
+    /* Horario: Tarjetas extraescolares horizontales */
+    .tarjetas-actividades {
+        flex-direction: row;
+    }
+    .tarjeta-actividad {
+        flex: 1; /* Divide el espacio en partes iguales [44, 45] */
+    }
+
+    /* Proyecto de Vida: Lista a la izquierda, fotos a la derecha */
+    .metas-grid {
+        flex-direction: row;
+    }
+    .lista-metas-contenedor { flex: 1.2; }
+    .galeria-metas { flex: 1.8; }
+}

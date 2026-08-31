@@ -2,8 +2,8 @@
 
 ## Kira Dreamer Studio
 
-"Imagen del logo de mi empresa indie"
-
 ### Empresa Indie (Independiente) de Animacion
 
 Dedicada a crear contenido animado original como series web, cortometrajes o películas.
+
+"Imagen del logo de mi empresa indie"
