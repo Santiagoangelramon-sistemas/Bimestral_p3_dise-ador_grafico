@@ -6,4 +6,10 @@
 
 Dedicada a crear contenido animado original como series web, cortometrajes o películas.
 
-"Imagen del logo de mi empresa indie"
+#### KIRA DREAMER STUDIO (Versión Alpha)
+![Logo del proyecto](./img/fase_beta.jpeg)
+
+# Modelo Relacional
+
+![Logo del proyecto](./img/polla.jpg)
+
