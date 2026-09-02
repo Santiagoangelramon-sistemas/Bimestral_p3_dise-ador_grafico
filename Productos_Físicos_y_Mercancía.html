@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Mercancía Física - Kira Dreamer Studio</title>
+    
+    <!-- Importación del CDN de Tailwind CSS para diseño moderno y responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Iconos de FontAwesome para dar soporte visual al ecommerce -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col">
+
+    <!-- HEADER / NAVEGACIÓN CORPORATIVA (IDÉNTICA A TUS OTRAS SECCIONES) -->
+    <header class="bg-gradient-to-r from-purple-800 to-indigo-900 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            
+            <!-- Logo de la Empresa Indie -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-purple-900 font-black text-xl shadow-inner">
+                    KD
+                </div>
+                <div>
+                    <h1 class="text-2xl font-black tracking-wide">KIRA DREAMER STUDIO</h1>
+                    <p class="text-xs text-purple-200">Tienda Oficial de Mercancía (Año 2032)</p>
+                </div>
+            </div>
+
+            <!-- Menú de Navegación de las 5 páginas del repositorio -->
+            <nav class="flex flex-wrap justify-center gap-1 md:gap-2">
+                <a href="index1.html" class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-purple-700/50 transition">
+                    <i class="fa-solid fa-house mr-1"></i> Inicio
+                </a>
+                <a href="Servicios_y_Videos.html" class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-purple-700/50 transition">
+                    <i class="fa-solid fa-video mr-1"></i> Videos
+                </a>
+                <a href="Productos_Digitales.html" class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-purple-700/50 transition">
+                    <i class="fa-solid fa-palette mr-1"></i> Prods. Digitales
+                </a>
+                <a href="Productos_Físicos_y_Mercancía.html" class="px-3 py-2 rounded-lg text-sm font-bold bg-purple-950 text-white shadow-md border border-purple-500/30 transition">
+                    <i class="fa-solid fa-shirt mr-1"></i> Mercancía Física
+                </a>
+            </nav>
+
+            <!-- Indicador de Carrito y Cuenta de Usuario (Interacción con base de datos) -->
+            <div class="flex items-center gap-4">
+                <a href="carrito.php" class="relative p-2 bg-purple-950/40 rounded-full border border-purple-500/20 hover:bg-purple-950 transition text-purple-200" title="Ver Carrito">
+                    <i class="fa-solid fa-cart-shopping text-lg"></i>
+                    <span class="absolute -top-1 -right-1 bg-pink-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                        0
+                    </span>
+                </a>
+                
+                <div class="flex items-center gap-2 bg-purple-950/60 px-4 py-2 rounded-full border border-purple-500/30">
+                    <i class="fa-solid fa-user text-purple-300"></i>
+                    <div class="text-left hidden sm:block">
+                        <p class="text-xs font-bold leading-none text-purple-200">Invitado / Cliente</p>
+                        <span class="text-[10px] text-emerald-400 font-mono"><i class="fa-solid fa-circle text-[8px] animate-pulse"></i> DB Activa</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- SECCIÓN HÉROE / BANNER PUBLICITARIO DE LA TIENDA -->
+    <section class="bg-gradient-to-b from-indigo-950 to-slate-900 text-white py-16 px-4 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.15)_0,transparent_100%)]"></div>
+        
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">
+                Colección Exclusiva Limitada
+            </span>
+            <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-4">
+                MERCANCÍA OFICIAL Y ROPA DE DISEÑADOR
+            </h2>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
+                Lleva el arte de Kira Dreamer Studio a las calles. Ropa de excelente calidad, posters de colección firmados y accesorios del equipo indie [1, 6].
+            </p>
+
+            <!-- Categorías de Filtro Rápido -->
+            <div class="flex flex-wrap justify-center gap-3">
+                <button class="bg-purple-600 hover:bg-purple-500 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-md transition">
+                    Toda la Colección
+                </button>
+                <button class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-5 py-2.5 rounded-full text-sm font-medium transition">
+                    <i class="fa-solid fa-shirt mr-1"></i> Ropa & Vestuario
+                </button>
+                <button class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-5 py-2.5 rounded-full text-sm font-medium transition">
+                    <i class="fa-solid fa-print mr-1"></i> Posters & Impresos
+                </a>
+                <button class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-5 py-2.5 rounded-full text-sm font-medium transition">
+                    <i class="fa-solid fa-icons mr-1"></i> Accesorios & Coleccionables
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CUERPO DE LA TIENDA CON REJILLA DE PRODUCTOS -->
+    <main class="max-w-7xl mx-auto px-4 py-12 flex-grow">
+        
+        <!-- CATEGORÍA 1: ROPA Y VESTUARIO -->
+        <div class="mb-16">
+            <div class="flex items-center gap-3 mb-8 border-b border-slate-200 pb-3">
+                <div class="p-2 bg-purple-100 text-purple-700 rounded-lg">
+                    <i class="fa-solid fa-shirt text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-800">Ropa & Prendas de Vestir</h3>
+            </div>
+
+            <!-- Grilla de productos responsiva con Tailwind: 1 col celular, 3 col en PC [2, 3] -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Producto 1: Hoodie Premium (Interactúa con base de datos PEDIDOS) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border border-slate-100 flex flex-col">
+                    <div class="relative bg-slate-100 h-64 overflow-hidden group">
+                        <img src="img/sudadera.jpg" alt="Hoodie Dreamer Oficial" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-pink-500 text-white text-xs font-black px-2.5 py-1 rounded-full uppercase">
+                            Más Vendido
+                        </span>
+                    </div>
+                    
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="text-lg font-bold text-slate-800">Hoodie Dreamer Oficial "Black & Purple"</h4>
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-0.5 rounded font-mono">Stock: 15</span>
+                            </div>
+                            <p class="text-sm text-slate-500 mb-4">Sudadera con capota hecha 100% de algodón de alta resistencia con el logo bordado del estudio en el pecho.</p>
+                        </div>
+
+                        <!-- Formulario para agregar al carrito de compras con PHP y SQL -->
+                        <form action="procesar_carrito.php" method="POST" class="border-t border-slate-100 pt-4 mt-4">
+                            <input type="hidden" name="id_producto" value="9"> <!-- ID del Producto físico en DB -->
+                            
+                            <!-- Selectores de Talla y Cantidad -->
+                            <div class="grid grid-cols-2 gap-3 mb-4">
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Talla</label>
+                                    <select name="talla" class="w-full bg-slate-50 border border-slate-200 rounded-lg text-xs p-1.5 focus:outline-none focus:border-purple-500">
+                                        <option value="S">S (Chica)</option>
+                                        <option value="M" selected>M (Mediana)</option>
+                                        <option value="L">L (Grande)</option>
+                                        <option value="XL">XL (Extra Grande)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Cantidad</label>
+                                    <input type="number" name="cantidad" value="1" min="1" max="15" class="w-full bg-slate-50 border border-slate-200 rounded-lg text-xs p-1.5 text-center focus:outline-none focus:border-purple-500">
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-black text-slate-800">$45.00 USD</span>
+                                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition active:scale-95 shadow">
+                                    <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Producto 2: Camiseta -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border border-slate-100 flex flex-col">
+                    <div class="relative bg-slate-100 h-64 overflow-hidden group">
+                        <img src="img/estampado.jpg" alt="Camiseta Kira" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-purple-600 text-white text-xs font-black px-2.5 py-1 rounded-full uppercase">
+                            Nueva Colección
+                        </span>
+                    </div>
+                    
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="text-lg font-bold text-slate-800">Camiseta Estampada Kira "El Despertar"</h4>
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-0.5 rounded font-mono">Stock: 22</span>
+                            </div>
+                            <p class="text-sm text-slate-500 mb-4">Camiseta deportiva negra con diseño frontal full-color del personaje principal "Kira" impreso en serigrafía.</p>
+                        </div>
+
+                        <form action="procesar_carrito.php" method="POST" class="border-t border-slate-100 pt-4 mt-4">
+                            <input type="hidden" name="id_producto" value="10">
+                            
+                            <div class="grid grid-cols-2 gap-3 mb-4">
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Talla</label>
+                                    <select name="talla" class="w-full bg-slate-50 border border-slate-200 rounded-lg text-xs p-1.5 focus:outline-none focus:border-purple-500">
+                                        <option value="S">S</option>
+                                        <option value="M" selected>M</option>
+                                        <option value="L">L</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Cantidad</label>
+                                    <input type="number" name="cantidad" value="1" min="1" max="22" class="w-full bg-slate-50 border border-slate-200 rounded-lg text-xs p-1.5 text-center focus:outline-none focus:border-purple-500">
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-black text-slate-800">$22.50 USD</span>
+                                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition active:scale-95 shadow">
+                                    <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Producto 3: Sudaderas del estudio -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border border-slate-100 flex flex-col">
+                    <div class="relative bg-slate-100 h-64 overflow-hidden group">
+                        <img src="img/chaqueta.jpeg" alt="Sudadera Edición Especial" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-indigo-600 text-white text-xs font-black px-2.5 py-1 rounded-full uppercase">
+                            Especial
+                        </span>
+                    </div>
+                    
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="text-lg font-bold text-slate-800">Chaqueta Universitaria "Kira Dreamers"</h4>
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-0.5 rounded font-mono">Stock: 8</span>
+                            </div>
+                            <p class="text-sm text-slate-500 mb-4">Chaqueta clásica universitaria con mangas blancas y torso morado. Edición exclusiva para fans del estudio.</p>
+                        </div>
+
+                        <form action="procesar_carrito.php" method="POST" class="border-t border-slate-100 pt-4 mt-4">
+                            <input type="hidden" name="id_producto" value="11">
+                            
+                            <div class="grid grid-cols-2 gap-3 mb-4">
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Talla</label>
+                                    <select name="talla" class="w-full bg-slate-50 border border-slate-200 rounded-lg text-xs p-1.5 focus:outline-none focus:border-purple-500">
+                                        <option value="S">S</option>
+                                        <option value="M" selected>M</option>
+                                        <option value="L">L</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Cantidad</label>
+                                    <input type="number" name="cantidad" value="1" min="1" max="8" class="w-full bg-slate-50 border border-slate-200 rounded-lg text-xs p-1.5 text-center focus:outline-none focus:border-purple-500">
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-black text-slate-800">$55.00 USD</span>
+                                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition active:scale-95 shadow">
+                                    <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- CATEGORÍA 2: IMPRESOS Y ACCESORIOS -->
+        <div>
+            <div class="flex items-center gap-3 mb-8 border-b border-slate-200 pb-3">
+                <div class="p-2 bg-pink-100 text-pink-700 rounded-lg">
+                    <i class="fa-solid fa-box-open text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-800">Impresos, Posters & Accesorios</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Poster Físico -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border border-slate-100 flex flex-col">
+                    <div class="relative bg-slate-100 h-64 overflow-hidden group">
+                        <img src="img/poster.jpg" alt="Poster de la serie web" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="text-lg font-bold text-slate-800">Poster Oficial Autografiado - Serie Web 2D</h4>
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-0.5 rounded font-mono">Stock: 30</span>
+                            </div>
+                            <p class="text-sm text-slate-500 mb-4">Poster impreso en papel fotográfico satinado de alto gramaje, firmado a mano por los animadores principales del estudio.</p>
+                        </div>
+
+                        <form action="procesar_carrito.php" method="POST" class="border-t border-slate-100 pt-4 mt-4">
+                            <input type="hidden" name="id_producto" value="12">
+                            <div class="mb-4">
+                                <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Cantidad</label>
+                                <input type="number" name="cantidad" value="1" min="1" max="30" class="w-32 bg-slate-50 border border-slate-200 rounded-lg text-xs p-1.5 text-center focus:outline-none">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-black text-slate-800">$15.00 USD</span>
+                                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition active:scale-95 shadow">
+                                    <i class="fa-solid fa-cart-plus"></i> Agregar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Set de Stickers -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border border-slate-100 flex flex-col">
+                    <div class="relative bg-slate-100 h-64 overflow-hidden group">
+                        <img src="img/stikers.jpeg" alt="Set de Stickers" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="text-lg font-bold text-slate-800">Set de Stickers Holográficos "Dreamers"</h4>
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-0.5 rounded font-mono">Stock: 50</span>
+                            </div>
+                            <p class="text-sm text-slate-500 mb-4">Pack de 8 calcomanías holográficas de vinilo premium resistentes al agua. Perfectos para decorar tu laptop o libreta de dibujo [Image 2].</p>
+                        </div>
+
+                        <form action="procesar_carrito.php" method="POST" class="border-t border-slate-100 pt-4 mt-4">
+                            <input type="hidden" name="id_producto" value="13">
+                            <div class="mb-4">
+                                <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Cantidad</label>
+                                <input type="number" name="cantidad" value="1" min="1" max="50" class="w-32 bg-slate-50 border border-slate-200 rounded-lg text-xs p-1.5 text-center focus:outline-none">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-black text-slate-800">$6.00 USD</span>
+                                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition active:scale-95 shadow">
+                                    <i class="fa-solid fa-cart-plus"></i> Agregar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Pins Metálicos -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border border-slate-100 flex flex-col">
+                    <div class="relative bg-slate-100 h-64 overflow-hidden group">
+                        <img src="img/MTV.jpeg" alt="Pins Metálicos" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="text-lg font-bold text-slate-800">Set de Pines Metálicos - Colección Kira & Co.</h4>
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-0.5 rounded font-mono">Stock: 12</span>
+                            </div>
+                            <p class="text-sm text-slate-500 mb-4">3 broches metálicos esmaltados a fuego con acabado brillante de alta resistencia. Colecciona los personajes principales de la marca.</p>
+                        </div>
+
+                        <form action="procesar_carrito.php" method="POST" class="border-t border-slate-100 pt-4 mt-4">
+                            <input type="hidden" name="id_producto" value="14">
+                            <div class="mb-4">
+                                <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Cantidad</label>
+                                <input type="number" name="cantidad" value="1" min="1" max="12" class="w-32 bg-slate-50 border border-slate-200 rounded-lg text-xs p-1.5 text-center focus:outline-none">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-black text-slate-800">$12.00 USD</span>
+                                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition active:scale-95 shadow">
+                                    <i class="fa-solid fa-cart-plus"></i> Agregar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER CON ENLACES A REDES SOCIALES E INFORMACIÓN DE ESTUDIANTE -->
+    <footer class="bg-slate-900 text-slate-400 py-12 px-4 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            
+            <!-- Acerca del Estudio -->
+            <div>
+                <h5 class="text-white font-bold text-lg mb-4">Kira Dreamer Studio</h5>
+                <p class="text-sm leading-relaxed text-slate-400">
+                    Somos un estudio de animación independiente fundado para dar vida a personajes fantásticos, mundos surrealistas e historias inolvidables en el año 2032 [1, 6].
+                </p>
+            </div>
+
+            <!-- Enlaces Rápidos del Sitio -->
+            <div class="md:text-center">
+                <h5 class="text-white font-bold text-lg mb-4">Navegación</h5>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="index1.html" class="hover:text-purple-400 transition">Inicio</a></li>
+                    <li><a href="Servicios_y_Videos.html" class="hover:text-purple-400 transition">Portafolio de Videos</a></li>
+                    <li><a href="Productos_Digitales.html" class="hover:text-purple-400 transition">Productos Digitales</a></li>
+                    <li><a href="Productos_Físicos_y_Mercancía.html" class="text-purple-400 font-bold">Mercancía Física</a></li>
+                </ul>
+            </div>
+
+            <!-- Redes Sociales Oficiales del Estudio -->
+            <div class="md:text-right">
+                <h5 class="text-white font-bold text-lg mb-4">Nuestras Redes Oficiales</h5>
+                <div class="flex md:justify-end gap-4 mb-4">
+                    <a href="https://youtube.com" target="_blank" class="w-10 h-10 bg-slate-800 hover:bg-red-600 hover:text-white rounded-full flex items-center justify-center text-lg transition" title="YouTube Oficial">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="w-10 h-10 bg-slate-800 hover:bg-pink-600 hover:text-white rounded-full flex items-center justify-center text-lg transition" title="Instagram Oficial">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com" target="_blank" class="w-10 h-10 bg-slate-800 hover:bg-black hover:text-white rounded-full flex items-center justify-center text-lg transition" title="X (Twitter) Oficial">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+                <p class="text-xs text-slate-400">¡Síguenos para avances y lanzamientos [Image 2]!</p>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+            <p>&copy; 2032 Kira Dreamer Studio. Desarrollado por la Especialidad de Sistemas del Colegio San José de Guanentá [7].</p>
+        </div>
+    </footer>
+
+</body>
+</html>
