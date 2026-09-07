@@ -17,3 +17,7 @@ Dedicada a crear contenido animado original como series web, cortometrajes o pel
 # Modelo Relacional
 
 ![Logo del proyecto](./img/polla.jpg)
+
+# Modelo E-R
+
+![Logo del proyecto](./img/mi_pene.jpg)
