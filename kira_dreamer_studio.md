@@ -16,7 +16,7 @@ Dedicada a crear contenido animado original como series web, cortometrajes o pel
 # Nueva version 
 #### KIRA DREAMER STUDIO (Versión 1.2 , Desarrollo...) 
 
-![Logo del proyecto](./img/ver_1.2.jpg)
+![Logo del proyecto](./img/webos.jpg)
 
 # Modelo Relacional
 
