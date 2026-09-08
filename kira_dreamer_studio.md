@@ -21,3 +21,9 @@ Dedicada a crear contenido animado original como series web, cortometrajes o pel
 # Modelo E-R
 
 ![Logo del proyecto](./img/mi_pene.jpg)
+
+# Modelo de PHP
+
+![Logo del proyecto](./img/php1.jpg)
+
+![Logo del proyecto](./img/php2.jpg)
